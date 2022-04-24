@@ -13,7 +13,7 @@ class Accountpassword:
          password: New account password
     
           """
-        #  self.account_type = account_type
-        #  self.user_name = user_name
-        #  self.password = password
+         self.account_type = account_type
+         self.user_name = user_name
+         self.password = password
 
