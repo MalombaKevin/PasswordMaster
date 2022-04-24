@@ -44,3 +44,18 @@ class Account:
         for account in cls.account_details:
             if account.account_type == account_type:
                 return account
+    
+    @classmethod
+    def account_exist(cls,account_type):
+        '''
+        Method that checks if a account exists from the account_details.
+        Args:
+            account_type: Account type to search if it exists
+        Returns :
+            Boolean: True or false depending if the account exists
+        '''
+        for account in cls.account_details:
+            if account.account_type == account_type:
+                    return True
+
+        return False
