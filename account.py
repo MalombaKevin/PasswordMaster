@@ -17,7 +17,15 @@ class Account:
     def save_account(self):
 
         '''
-        save_contact method saves contact objects into contact_list
+        save_account method saves account objects into account_details
         '''
 
         Account.account_details.append(self)
+    
+    def delete_account(self):
+
+        '''
+        delete_account method deletes a saved account from the account_details
+        '''
+
+        Account.account_details.remove(self)
