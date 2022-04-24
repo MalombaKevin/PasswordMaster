@@ -29,3 +29,18 @@ class Account:
         '''
 
         Account.account_details.remove(self)
+    
+    @classmethod
+    def find_by_account_type(cls,account_type):
+        '''
+        Method that takes in an account type and returns a username and password that matches account type searched.
+
+        Args:
+            account_type : Type of account
+        Returns :
+            username and password associated with account searched
+        '''
+
+        for account in cls.account_details:
+            if account.account_type == account_type:
+                return account

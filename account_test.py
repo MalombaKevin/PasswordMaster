@@ -50,7 +50,7 @@ class TestContact(unittest.TestCase):
             test_account.save_account()
             self.assertEqual(len(Account.account_details),2)
     
-    def test_delete_accoint(self):
+    def test_delete_account(self):
             '''
             test_delete_account to test if I can remove an account from my account details
             '''
@@ -60,6 +60,19 @@ class TestContact(unittest.TestCase):
 
             self.new_account.delete_account()# Deleting a contact object
             self.assertEqual(len(Account.account_details),1)
+   
+    def test_find_account_by_account_type(self):
+        '''
+        test to check if we can find a contact by phone number and display information
+        '''
+
+        self.new_account.save_account()
+        test_account = Account("Tibapedia","user","passwaad") 
+        test_account.save_account()
+
+        found_account = Account.find_by_account_type("TIbapedia")
+
+        # self.assertEqual()
  
 
 if __name__ ==  '__main__':
