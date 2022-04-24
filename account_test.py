@@ -24,6 +24,18 @@ class TestContact(unittest.TestCase):
         self.assertEqual(self.new_account.account_type,"Twitter")
         self.assertEqual(self.new_account.user_name,"KMalomba")
         self.assertEqual(self.new_account.password,"passwaad")
+    
+    def test_save_account(self):
+        '''
+        test_save_account test case to test if the account object is saved into
+         the account details
+        '''
+        self.new_account.save_account() # saving the new account
+        self.assertEqual(len(Account.account_details),1)
+
+if __name__ ==  '__main__':
+    unittest.main()
+
 
 
 if __name__ == '__main__':
