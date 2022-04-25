@@ -39,4 +39,44 @@ def display_account():
     return Account.display_account()
 
 
+def main():
+    print("Greetings Earthlings. Welcome to PasswordMaster. Enter your name:")
+    passwordMaster_user_name = input()
 
+    print(f"Hi {passwordMaster_user_name}.PasswordMaster at your service. How can I help you?")
+    print('\n')
+    while True:
+                    print("Use these short codes : ca - create a new account, da - display account, fa -find an account, q -quit PasswordMaster")
+
+                    short_code = input().lower()
+
+                    if short_code == 'ca':
+
+
+                            print ("Enter Account type: [ Twitter/ Facebook/ Paypal]")
+                            account_type = input()
+
+                            print("Enter Account user name  ")
+                            user_name = input()
+
+                            print("Enter Account Password")
+                            password = input()
+
+            
+                            save_account(create_account(account_type,user_name,password)) 
+                            print ('\n')
+                            print(f"New Account for {account_type} with a username {user_name} created")
+                            print ('\n')
+
+                    elif short_code == "q":
+                            print("Thank you for using PasswordMaster. Your security is our concern. Ciao!")
+                            break
+                    else:
+                            print("I really didn't get that. Please use the short codes")
+
+                 
+
+   
+if __name__ == '__main__':
+
+    main()

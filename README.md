@@ -1,7 +1,5 @@
-
-
 # PasswordMaster
-Welcome to Quotesophy! Inspiring a generation!
+Welcome to PasswordMaster
 
 ### By Kevin Malomba  
 
@@ -19,7 +17,7 @@ Welcome to Quotesophy! Inspiring a generation!
 
 
 ## Description
-+ In the current day an age we have multiple accounts for differet purposes. Whether it's your gmail account or facebook account. PasswordMaster helps users keep their passwords for future references as well as help generate new passwords. It's a safe haven for your passwords
++ In the current day an age we have multiple accounts for differet purposes. Whether it's your gmail account or facebook account or other social media sites. PasswordMaster helps users keep their passwords for future references as well as help generate new passwords. It's a safe haven for your passwords
 
 ## Access
 
