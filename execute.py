@@ -53,10 +53,10 @@ def main():
                     if short_code == 'ca':
 
 
-                            print ("Enter Account type: [ Twitter/ Facebook/ Paypal]")
+                            print ("Enter Account type: [ Twitter/ Facebook/ Paypal]") #account input
                             account_type = input()
 
-                            print("Enter Account user name  ")
+                            print("Enter Account user name  ")   #Username input
                             user_name = input()
 
                             print("Enter Account Password")
