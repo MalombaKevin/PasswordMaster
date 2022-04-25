@@ -13,7 +13,7 @@ class Account:
         self.password = password
     
     account_details = [] # Empty contact list
- # Init method up here
+
     def save_account(self):
 
         '''
@@ -59,3 +59,10 @@ class Account:
                     return True
 
         return False
+    @classmethod
+    def display_account(cls):
+        '''
+        method that returns the contact list
+        '''
+        return cls.account_details
+    

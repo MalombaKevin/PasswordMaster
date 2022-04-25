@@ -41,12 +41,14 @@ def display_account():
 
 def main():
     print("Greetings Earthling. Welcome to PasswordMaster. Enter your name:")
+    
     passwordMaster_user_name = input()
 
     print(f"Hi {passwordMaster_user_name}.PasswordMaster at your service. How can I help you?")
+    # print("\U00001F601")
     print('\n')
     while True:
-                    print("Use the following  ca - create a new account | da - display account | L - Log In |  X - delete account | q -quit PasswordMaster ")
+                    print("Use the following  ca - create a new account | all - display  all accounts | fa -find an account | x -delete account | q -quit PasswordMaster ")
 
                     short_code = input().lower()
 
@@ -65,13 +67,43 @@ def main():
             
                             save_account(create_account(account_type,user_name,password)) 
                             print ('\n')
+                            print('***' * 20)
                             print(f"New [{account_type}] account with a username [{user_name}] and password [{password}] created")
                             print ('\n')
 
 
                             print("Enter the account type you want to find")
+                
+                    elif short_code == 'fa':
 
-                            
+                            print("Enter the account you want to search for")
+
+                            search_account_type= input()
+                            if check_existing_account(search_account_type):
+                                    search_account = find_account(search_account_type)
+                                    print(f"Your Search results:")
+                                    print('*' * 20)
+                                    print(f"Account Type............{search_account_type}")
+                                    print(f"Account User Name.......{search_account.user_name}")
+                                    print(f"Account Password........{search_account.password}")
+                            else:
+                                    print("Sorry. PasswordMaster could not find your account!. Try creating a new account")
+
+                    elif short_code == 'all':
+
+                            if display_account():
+                                    print("Here is a list of all your accounts, their usernames and passwords")
+                                    print('\n')
+
+                                    for account in display_account():
+                                            
+                                            print(f"Account Type: {account.account_type}  {account.account_type} User Name: {account.user_name}  Password: {account.password}")
+
+                                    print('\n')
+                            else:
+                                    print('\n')
+                                    print("You dont seem to have any accounts saved yet. Select ca to save an account")
+                                    print('\n')
 
                     elif short_code == "q":
                             print("Thank you for using PasswordMaster. Your security is our concern. Ciao!")
