@@ -21,13 +21,22 @@ def del_account(account):
 
 def find_account(account_type):
     '''
-    Function that finds a account by account_type and returns the account
+    Function that finds an account by account_type and returns the account
     '''
     return Account.find_by_account_type(account_type)
 
 
 def check_existing_account(account_type):
     '''
-    Function that check if a account exists with the account_type and return a Boolean
+    Function that check if an account exists with the account_type and return a Boolean
     '''
     return Account.account_exist(account_type)
+
+def display_account():
+    '''
+    Function that returns all the saved accounts
+    '''
+    return Account.display_account()
+
+
+
