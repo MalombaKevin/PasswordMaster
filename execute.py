@@ -72,7 +72,7 @@ def main():
                             print("Thank you for using PasswordMaster. Your security is our concern. Ciao!")
                             break
                     else:
-                            print("I really didn't get that. Please use the short codes")
+                            print("Sorry PasswordMaster didn't understand your codes. Try again using the codes given")
 
                  
 
