@@ -1,3 +1,4 @@
+import random
 from account import Account
 
 def create_account(account_type,user_name,password):
@@ -48,22 +49,30 @@ def main():
     # print("\U00001F601")
     print('\n')
     while True:
-                    print("Use the following  ca - create a new account | all - display  all accounts | fa -find an account | x -delete account | q -quit PasswordMaster ")
+                    print("Use the following shortcodes  ca - create a new account | all - display  all accounts | fa -find an account | x -delete account | q -quit PasswordMaster ")
 
                     short_code = input().lower()
 
                     if short_code == 'ca':
 
 
-                            print ("Enter Account type: [ Twitter/ Facebook/ Paypal]") #account input
+                            print ("Enter Account type: [ eg Twitter/ Facebook/ Paypal / GMAIL / etc]") #account input
                             account_type = input()
 
                             print("Enter Account user name  ")   #Username input
                             user_name = input()
 
-                            print("Enter Account Password")
-                            print
+                            print ("Enter your password")
                             password = input()
+
+                        #     print("Enter Account Password : Choose A for Bot generated Password or B to input password ")
+                        #     choice = input()
+                        #     if choice == "A or a":
+                        #            password = print(random.randit(300000000, 10000000000000))
+                        #     elif choice == "B or b":
+                        #             password =input()
+                            
+                        # #     password = input()
 
             
                             save_account(create_account(account_type,user_name,password)) 
@@ -73,11 +82,11 @@ def main():
                             print ('\n')
 
 
-                            print("Enter the account type you want to find")
+                        #     print(" Select : ca - create a new account | all - display  all accounts | fa -find an account | x -delete account | q -quit PasswordMaster ")
                 
                     elif short_code == 'fa':
 
-                            print("Enter the account you want to search for")
+                        #     print("Enter the account you want to search for")
 
                             search_account_type= input()
                             if check_existing_account(search_account_type):
@@ -89,6 +98,12 @@ def main():
                                     print(f"Account Password........{search_account.password}")
                             else:
                                     print("Sorry. PasswordMaster could not find your account!. Select ca to create an account")
+                   
+                #     elif short_code == "x":
+
+                #             print("Enter the account you want to search for")
+                #             if del_account():
+                            
                                     
 
                     elif short_code == 'all':
