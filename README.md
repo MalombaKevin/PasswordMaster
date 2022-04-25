@@ -34,8 +34,8 @@ Welcome to PasswordMaster
 
 
 ## Future Plans
-Adds extra features. The system is still buggy
-Integrate a front-end for PasswordMaster
++ Adds extra features. The system is still buggy
+ + Integrate a front-end for PasswordMaster
 
 ## Authors Info 
 
