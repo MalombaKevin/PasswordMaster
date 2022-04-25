@@ -62,6 +62,7 @@ def main():
                             user_name = input()
 
                             print("Enter Account Password")
+                            print
                             password = input()
 
             
@@ -87,7 +88,8 @@ def main():
                                     print(f"Account User Name.......{search_account.user_name}")
                                     print(f"Account Password........{search_account.password}")
                             else:
-                                    print("Sorry. PasswordMaster could not find your account!. Try creating a new account")
+                                    print("Sorry. PasswordMaster could not find your account!. Select ca to create an account")
+                                    
 
                     elif short_code == 'all':
 
